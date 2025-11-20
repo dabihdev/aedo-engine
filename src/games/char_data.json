@@ -1,0 +1,6 @@
+{
+    "name": "Player One",
+    "HP": 100,
+    "MP": 50,
+    "current_inventory": []
+}
