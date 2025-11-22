@@ -76,7 +76,7 @@ class Engine:
         """
         user_input = input("> ").strip().lower()
 
-        if user_input in ["quit", "exit"]:
+        if user_input in {"quit", "exit"}:
             self.running = False
             return {"command": "quit"}
 
@@ -85,7 +85,7 @@ class Engine:
             return None
 
         # Basic movement command parsing (e.g., "go north", "north")
-        if parts[0] in ["go", "move", "walk"] and len(parts) >= 2:
+        if parts[0] in {"go", "move", "walk"} and len(parts) >= 2:
             return {"command": "move", "target": parts[-1]}
         elif parts[0] in self._get_current_location().exits.keys(): # Direct direction input
              return {"command": "move", "target": parts[0]}
