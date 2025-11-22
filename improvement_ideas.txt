@@ -1,0 +1,13 @@
+NEXT STEPS
+
+STEP 1
+- add items
+- add entities (npcs)
+- add dialogues
+MILESTONE: engine should work with an interactive fiction, on terminal screen
+
+STEP 2
+MILESTONE: engine should work with an RPG text-based adventure, on terminal screen
+
+STEP 3
+- add graphical UI to the writer (the program that creates the game)
