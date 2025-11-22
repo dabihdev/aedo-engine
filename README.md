@@ -1,0 +1,1 @@
+A game engine to create text-based-adventures, in Python. Still in early stages.
