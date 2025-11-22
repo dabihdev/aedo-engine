@@ -54,7 +54,7 @@ class Engine:
             return
 
         # Display room
-        print(f"\n## You are in: {current_loc.name} ##")
+        print(f"\n{current_loc.name}")
         print("-" * (len(current_loc.name) + 18))
         print(current_loc.description)
         
@@ -64,8 +64,6 @@ class Engine:
             print(f"\nAvailable Exits: {exit_names.capitalize()}")
         else:
             print("\nThere are no obvious exits.")
-        
-        print("\n---")
 
 
     def parse_input(self) -> Optional[Dict[str, str]]:
@@ -76,7 +74,7 @@ class Engine:
             A dictionary like {"command": "go", "target": "north"}, or None 
             if the command is "quit" or invalid.
         """
-        user_input = input("What do you do? (e.g., go north, quit) > ").strip().lower()
+        user_input = input("> ").strip().lower()
 
         if user_input in ["quit", "exit"]:
             self.running = False
