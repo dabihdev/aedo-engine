@@ -1,5 +1,6 @@
 from engine.models import GameState, Location, Character
 from typing import Optional, Dict
+from .utils import clear_screen
 
 class Engine:
     """
@@ -40,12 +41,19 @@ class Engine:
         """
         Displays the name, description, and available exits of the current location.
         """
+        # First, clear the terminal screen to give the feeling of
+        # changing scene, and avoid clusters of text which could make
+        # everything incomprehensible.
+        clear_screen()
+
+        # Get current location
         current_loc = self._get_current_location()
         if not current_loc:
             print("\n!!! ERROR: Location not found. Game Over. !!!")
             self.running = False
             return
 
+        # Display room
         print(f"\n## You are in: {current_loc.name} ##")
         print("-" * (len(current_loc.name) + 18))
         print(current_loc.description)
