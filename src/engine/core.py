@@ -66,12 +66,12 @@ class Engine:
             print("\nThere are no obvious exits.")
 
 
-    def parse_input(self) -> Optional[Dict[str, str]]:
+    def parse_input(self) -> dict[str, str] | None:
         """
         Receives user input and attempts to parse it into a command.
 
         Returns:
-            A dictionary like {"command": "go", "target": "north"}, or None 
+            signal: A dictionary like {"command": "go", "target": "north"}, or None 
             if the command is "quit" or invalid.
         """
         user_input = input("> ").strip().lower()
