@@ -14,7 +14,7 @@ print("---")
 start_loc = Location(
     id="START", 
     name="The Dusty Attic", 
-    description="You wake up in a small, dusty attic. Cobwebs cling to the rafters. "
+    description="A small, dusty attic. Cobwebs cling to the rafters. "
                 "A single door leads downstairs."
 )
 start_loc.add_exits({"down": "hallway"})

@@ -126,10 +126,14 @@ class Engine:
         The main game loop.
         """
         while self.running:
+            # 1. Render game
             self.show_location()
             if not self.running: # Check if show_location set running to False
                 break
             
+            # 2. Get input from player
             command = self.parse_input()
+
+            # 3. Update game state
             if command:
-                self.update_gamestate(command)
+               self.update_gamestate(command)
