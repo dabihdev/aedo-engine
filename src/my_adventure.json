@@ -1,0 +1,104 @@
+{
+    "start_room_id": "room_1",
+    "rooms": {
+        "room_1": {
+            "room_id": "room_1",
+            "name": "Western Gate",
+            "description": "You stand before a towering iron gate, guarded by an old man.",
+            "exits": {
+                "east": "room_2"
+            },
+            "items": [
+                {
+                    "name": "Worn Sign",
+                    "description": "A sign reads: 'Keep Out'.",
+                    "can_take": false
+                }
+            ],
+            "enemies": [],
+            "npcs": [
+                {
+                    "name": "Gatekeeper",
+                    "dialogue_id": "old_man_chat",
+                    "trigger_event_id": null
+                }
+            ],
+            "interactive_objects": {}
+        },
+        "room_2": {
+            "room_id": "room_2",
+            "name": "Central Courtyard",
+            "description": "A vast, crumbling courtyard. A worn inscription marks a statue base.",
+            "exits": {
+                "west": "room_1",
+                "east": "room_3"
+            },
+            "items": [
+                {
+                    "name": "Sunstone Key",
+                    "description": "A strange, warm key made of polished orange stone.",
+                    "can_take": true
+                }
+            ],
+            "enemies": [],
+            "npcs": [],
+            "interactive_objects": {
+                "inscription": "ruin_inscription"
+            }
+        },
+        "room_3": {
+            "room_id": "room_3",
+            "name": "Eastern Tower Base",
+            "description": "The base of a collapsed tower. A locked chest sits in the corner.",
+            "exits": {
+                "west": "room_2"
+            },
+            "items": [],
+            "enemies": [],
+            "npcs": [],
+            "interactive_objects": {
+                "chest": "chest_vault"
+            }
+        }
+    },
+    "events": {
+        "old_man_chat": {
+            "event_id": "old_man_chat",
+            "event_type": "dialogue",
+            "data": {
+                "speaker": "Old Gatekeeper",
+                "lines": [
+                    "Hello, traveler. The ruins are dangerous.",
+                    "Only the bravest seek the Sunstone Key.",
+                    "It's said to be hidden in the eastern tower."
+                ]
+            }
+        },
+        "ruin_inscription": {
+            "event_id": "ruin_inscription",
+            "event_type": "read",
+            "data": {
+                "text": "The past is a lock, the present is the key. Seek what is hidden."
+            }
+        },
+        "chest_vault": {
+            "event_id": "chest_vault",
+            "event_type": "chest",
+            "data": {
+                "key_name": "Sunstone Key",
+                "items": [
+                    {
+                        "name": "Ancient Sword",
+                        "description": "A magnificent sword, still sharp.",
+                        "can_take": true
+                    },
+                    {
+                        "name": "Gold Coin",
+                        "description": "A single gold coin.",
+                        "can_take": true
+                    }
+                ]
+            }
+        }
+    }
+}
