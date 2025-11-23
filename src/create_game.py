@@ -1,4 +1,5 @@
 from game_builder import GameBuilder, GameData, Room, Item, NPC, Event
+from settings import *
 
 # --- 1. Define Events ---
 dialogue_a = Event("old_man_chat", "dialogue", {
@@ -56,4 +57,4 @@ game_data.add_event(dialogue_a)
 game_data.add_event(inscription_read)
 game_data.add_event(chest_event)
 
-GameBuilder.save_game(game_data, "my_adventure.json")
+GameBuilder.save_game(game_data, GAMES_FOLDER+"my_adventure.json")
