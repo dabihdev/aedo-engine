@@ -2,3 +2,8 @@
 and same backwards. Could we add a simple link between two rooms? Links can be two-sided
 or one-sided
     - maybe a link method would be handy
+
+ex. code
+create room1
+create room2
+room1.link(room2, direction, two_sided = True)
