@@ -1,4 +1,4 @@
-from game_builder import GameBuilder, GameData, Room, Item, NPC, Event
+from storywriter import GameBuilder, GameData, Room, Item, NPC, Event
 from settings import *
 
 # --- 1. Define Events ---
