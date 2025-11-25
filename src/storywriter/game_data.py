@@ -125,7 +125,7 @@ class Room:
         self.enemies = []       # List of Enemy objects
         self.npcs = []          # List of NPC objects
         self.interactive_objects = {} # Map names to event IDs: {"chest": "chest_1", "inscription": "text_1"}
-
+    
     def add_exit(self, direction: str, target_room_id: str):
         """Adds a directional exit to another room ID."""
         self.exits[direction] = target_room_id
