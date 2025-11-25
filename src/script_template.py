@@ -1,22 +1,32 @@
 from storywriter import GameBuilder, GameData, Room, Item, NPC, Event
 from settings import *
 
-# REPEAT FOR EACH LOCATION:
+# INITIALIZE GAME
+game_data = GameData("LOC1")
 
-# 1. Create enemies and npcs
+# LOCATION NAME:
+# ========================================================================
+
+# Create enemies and npcs
 # ...
 
-# 2. Create items
+# Create items
 # ...
 
-# 3. Create events
+# Create events
 # ...
 
-# 4. Create location
+# Create location
 # ...
 # add exits
 # add enemies/npcs to location
 # add items to location
 # add events to location
 
-# 5. Add location to game data
+# Add location to game data
+# ...
+
+# ========================================================================
+
+# When you finished building your level, save it
+GameBuilder.save_game(game_data, GAMES_FOLDER+"my_adventure.json")
